@@ -1,22 +1,36 @@
 {
-  "title": "Stability Analysis of a Motorcycle using Lumped Parameter Modelling",
-  "summary": "Four-degree-of-freedom Lagrangian model with tyre relaxation and gyroscopic effects, used to find and suppress the weave and wobble modes.",
+  "title": "Motorcycle Stability Analysis of the Bajaj Pulsar 150",
+  "summary": "Built a 4-DOF lumped-parameter stability model of an Indian 150 cc commuter motorcycle, with lagging tyre forces and gyroscopic wheels, and validated it against a published bicycle benchmark to six significant figures. With a 70 kg rider it balances itself from 24 to 121 km/h, and handlebar wobble sets in just 5.7 km/h above its 115 km/h top speed.",
   "category": "Vehicle Dynamics",
   "date": "2025-11",
   "period": "Oct 2025 – Nov 2025",
+  "context": "Course project, Design of Automotive Systems, IISc",
   "status": "Completed",
   "featured": true,
-  "tags": [
-    "MATLAB",
-    "Lagrangian mechanics",
-    "Eigenvalue analysis",
-    "Tyre relaxation"
-  ],
+  "tags": ["Python", "Eigenvalue analysis", "Kane's method", "MATLAB", "Complex-step linearisation", "Tyre relaxation modelling"],
+  "cover": "images/cover.png",
+  "coverAlt": "Real part of the weave, wobble and capsize eigenvalues against speed for the Pulsar 150, with the self-stable band from 24 to 121 km/h shaded and the 115 km/h top speed marked.",
   "highlights": [
-    {
-      "value": "4 DOF",
-      "label": "Lagrangian equations of motion"
-    }
+    { "value": "24–121 km/h", "label": "self-stable speed band with a 70 kg rider" },
+    { "value": "4 DOF", "label": "lumped-parameter model with tyre relaxation and wheel gyroscopics" },
+    { "value": "6 sig. figs", "label": "agreement with the Meijaard et al. (2007) benchmark critical speeds" },
+    { "value": "5.7 km/h", "label": "margin between top speed and the onset of wobble" }
+  ],
+  "links": [
+    { "label": "Full report (PDF)", "url": "report.pdf" }
+  ],
+  "demo": {
+    "file": "demo/index.html",
+    "title": "Pulsar 150 stability explorer",
+    "description": "Drag the speed slider and switch the steering damping to see whether capsize, weave and wobble grow or die out, then press play to watch each motion.",
+    "height": 900
+  },
+  "gallery": [
+    { "src": "images/root-locus.png", "caption": "Root locus from 3 to 160 km/h, coloured by speed" },
+    { "src": "images/mode-shapes.png", "caption": "Roll, steer and yaw content of each mode at 80 km/h" },
+    { "src": "images/frequency-and-damping.png", "caption": "Frequency and damping ratio of weave and wobble against speed" },
+    { "src": "images/damping-tradeoff.png", "caption": "Wobble limit rises with steering damping while weave damping at top speed falls" },
+    { "src": "images/loading-cases.png", "caption": "Weave and wobble for solo, pillion and 15 kg top-box loading" }
   ],
   "writeup": "writeup.md"
 }
