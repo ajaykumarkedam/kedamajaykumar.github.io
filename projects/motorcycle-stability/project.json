@@ -1,0 +1,22 @@
+{
+  "title": "Stability Analysis of a Motorcycle using Lumped Parameter Modelling",
+  "summary": "Four-degree-of-freedom Lagrangian model with tyre relaxation and gyroscopic effects, used to find and suppress the weave and wobble modes.",
+  "category": "Vehicle Dynamics",
+  "date": "2025-11",
+  "period": "Oct 2025 – Nov 2025",
+  "status": "Completed",
+  "featured": true,
+  "tags": [
+    "MATLAB",
+    "Lagrangian mechanics",
+    "Eigenvalue analysis",
+    "Tyre relaxation"
+  ],
+  "highlights": [
+    {
+      "value": "4 DOF",
+      "label": "Lagrangian equations of motion"
+    }
+  ],
+  "writeup": "writeup.md"
+}

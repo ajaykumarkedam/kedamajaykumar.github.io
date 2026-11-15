@@ -1,0 +1,141 @@
+{
+  "name": "Kedam Ajay Kumar",
+  "label": "Engineering portfolio",
+  "tagline": "M.Tech Mobility Engineering, Indian Institute of Science Bengaluru",
+  "photo": "",
+  "photoCaption": "M.Tech student in Mobility Engineering at IISc Bengaluru.",
+  "bio": [
+    "My thesis is a high-heat-flux, closed-loop two-phase thermosyphon for EV thermal management. I study how texturing the evaporator surface changes bubble dynamics, flow-regime transitions and boiling heat transfer.",
+    "Beyond thermal-fluids, I have built a blended regenerative and friction braking controller on an STM32 with hardware-in-the-loop testing, and a four-degree-of-freedom stability model of a motorcycle. I did my B.Tech in Mechanical Engineering at JNTUA College of Engineering, Ananthapuramu."
+  ],
+  "focus": [
+    "Two-phase thermal management for EV power electronics and batteries",
+    "Vehicle dynamics and stability modelling",
+    "Model-based design of EV control systems"
+  ],
+  "facts": [
+    {
+      "label": "Degree",
+      "value": "M.Tech, Mobility Engineering"
+    },
+    {
+      "label": "Graduating",
+      "value": "2027"
+    },
+    {
+      "label": "Institute",
+      "value": "Indian Institute of Science, Bengaluru"
+    },
+    {
+      "label": "Based in",
+      "value": "Bengaluru, India"
+    }
+  ],
+  "resume": "assets/resume/resume.pdf",
+  "contact": {
+    "email": "[your.email@example.com]",
+    "linkedin": "https://www.linkedin.com/in/[your-handle]",
+    "github": "https://github.com/[your-username]",
+    "scholar": ""
+  },
+  "contactNote": "[Say what you are looking for, e.g. graduate roles in EV thermal management, thermal-fluids simulation or vehicle dynamics.]",
+  "footerLine": "Projects in thermal-fluids, vehicle dynamics and EV controls.",
+  "categories": [
+    "Thermal & Fluids / FEA",
+    "Vehicle Dynamics",
+    "Controls & Estimation",
+    "Design & Fabrication"
+  ],
+  "skills": [
+    {
+      "group": "Simulation",
+      "items": [
+        "Ansys Fluent",
+        "COMSOL Multiphysics",
+        "Abaqus"
+      ]
+    },
+    {
+      "group": "CAD",
+      "items": [
+        "Siemens NX",
+        "SolidWorks",
+        "Fusion 360",
+        "AutoCAD"
+      ]
+    },
+    {
+      "group": "Modelling and programming",
+      "items": [
+        "MATLAB",
+        "Simulink",
+        "Simscape",
+        "Python"
+      ]
+    }
+  ],
+  "experience": [
+    {
+      "role": "Industrial Trainee",
+      "org": "Diesel Loco Shed, Indian Railways",
+      "period": "Sep 2022 – Oct 2022",
+      "points": [
+        "Studied the fuel oil, lube oil and water cooling circuits of ALCO 251C V-type 16-cylinder diesel engines.",
+        "Examined the working of turbo superchargers and after-coolers on the air intake.",
+        "Observed engine, bogie, traction motor and brake cylinder overhauls; assisted in helical spring testing (free vs. loaded height) and wheel disc dimension checks."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.Tech, Mobility Engineering",
+      "org": "Indian Institute of Science, Bengaluru",
+      "period": "2027",
+      "score": "CGPA 7.9"
+    },
+    {
+      "degree": "B.Tech, Mechanical Engineering",
+      "org": "JNTUA College of Engineering, Ananthapuramu",
+      "period": "2023",
+      "score": "CGPA 8.42"
+    },
+    {
+      "degree": "Class XII",
+      "org": "Narayana Junior College, Nandyal",
+      "period": "2019",
+      "score": "9.82"
+    },
+    {
+      "degree": "Class X",
+      "org": "Good Shepherd EM School, Nandyal",
+      "period": "2017",
+      "score": "9.7"
+    }
+  ],
+  "coursework": [
+    {
+      "level": "Postgraduate",
+      "items": [
+        "Two Phase Flows",
+        "Thermal Fluids Engineering for Practical Applications",
+        "Introduction to Hybrid Electric Vehicles",
+        "Design of Automotive Systems",
+        "A Practical Introduction to Data Analysis for Engineers"
+      ]
+    },
+    {
+      "level": "Undergraduate",
+      "items": [
+        "Thermodynamics",
+        "Thermal Engineering",
+        "Fluid Mechanics",
+        "Strength of Materials",
+        "Machine Design"
+      ]
+    }
+  ],
+  "activities": [
+    "Workshops: COMSOL Multiphysics for fluid flow and heat transfer (IISc); Ansys Maxwell for EV traction motor design.",
+    "Events Coordinator, DYNAMECHS (JNTUA): led a team running technical and non-technical events."
+  ]
+}

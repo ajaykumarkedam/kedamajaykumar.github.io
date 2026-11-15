@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Engineering project portfolio">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash.
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" id="brand">Portfolio</a>
+      <nav class="nav" aria-label="Main">
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#experience">Experience</a>
+        <a href="#contact">Contact</a>
+        <a class="btn btn-small" id="nav-resume" href="#" target="_blank" rel="noopener">Résumé</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero wrap" id="about">
+      <img class="hero-photo" id="hero-photo" alt="" width="132" height="132">
+      <div class="hero-text">
+        <p class="eyebrow" id="hero-location"></p>
+        <h1 id="hero-name">Loading…</h1>
+        <p class="headline" id="hero-headline"></p>
+        <div class="bio" id="hero-bio"></div>
+        <div class="hero-actions" id="hero-actions"></div>
+      </div>
+    </section>
+
+    <section class="section wrap" id="projects">
+      <div class="section-head">
+        <h2>Projects</h2>
+        <div class="filters" id="filters" role="group" aria-label="Filter projects by category"></div>
+      </div>
+      <div class="grid" id="project-grid" aria-live="polite"></div>
+      <p class="empty" id="project-empty" hidden>No projects in this category yet.</p>
+    </section>
+
+    <section class="section wrap" id="skills">
+      <div class="section-head"><h2>Skills &amp; tools</h2></div>
+      <div class="skills" id="skills-list"></div>
+    </section>
+
+    <section class="section wrap" id="experience">
+      <div class="two-col">
+        <div>
+          <div class="section-head"><h2>Experience</h2></div>
+          <ol class="timeline" id="experience-list"></ol>
+        </div>
+        <div>
+          <div class="section-head"><h2>Education</h2></div>
+          <ol class="timeline" id="education-list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section wrap contact" id="contact">
+      <div class="section-head"><h2>Contact</h2></div>
+      <p>Happy to talk about any of these projects, or about roles and collaborations.</p>
+      <div class="hero-actions" id="contact-actions"></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" id="footer-text"></div>
+  </footer>
+
+  <div class="load-error wrap" id="load-error" hidden></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

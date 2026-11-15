@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cooling curve explorer</title>
+<style>
+  :root { --bg:#fff; --text:#1b1f24; --muted:#5b6470; --border:#e2e4e8; --accent:#1f5fbf; --bad:#c0392b; }
+  * { box-sizing: border-box; }
+  body { margin:0; padding:16px; background:var(--bg); color:var(--text); font:14px/1.5 system-ui, sans-serif; }
+  .controls { display:grid; grid-template-columns: repeat(auto-fit, minmax(220px,1fr)); gap:12px 24px; margin-bottom:12px; }
+  label { display:block; color:var(--muted); }
+  label b { color:var(--text); font-family: ui-monospace, Menlo, monospace; }
+  input[type=range] { width:100%; accent-color: var(--accent); }
+  .readout { display:flex; flex-wrap:wrap; gap:18px; font-family: ui-monospace, Menlo, monospace; margin: 6px 0 10px; }
+  .readout span { color:var(--muted); } .readout b { color:var(--text); }
+  .bad b { color: var(--bad); }
+  canvas { width:100%; height:330px; display:block; border:1px solid var(--border); border-radius:8px; }
+</style>
+</head>
+<body>
+  <div class="controls">
+    <label>Convection coefficient h: <b id="hv"></b> W/m²·K<input id="h" type="range" min="5" max="500" step="5" value="50"></label>
+    <label>Plate thickness L: <b id="Lv"></b> mm<input id="L" type="range" min="2" max="60" step="1" value="10"></label>
+  </div>
+  <div class="readout">
+    <div id="bi"><span>Bi = </span><b></b></div>
+    <div><span>τ = </span><b id="tau"></b></div>
+    <div><span>time to 50 °C = </span><b id="t50"></b></div>
+  </div>
+  <canvas id="c"></canvas>
+<script>
+(function () {
+  var rho = 7850, c = 470, k = 45, Ti = 300, Tinf = 25, Tsafe = 50;
+  var $ = function (id) { return document.getElementById(id); };
+  var cv = $("c"), ctx = cv.getContext("2d");
+  function css(v) { return getComputedStyle(document.documentElement).getPropertyValue(v).trim(); }
+  function draw() {
+    var h = +$("h").value, L = +$("L").value / 1000, Lc = L / 2;
+    var tau = rho * c * Lc / h, Bi = h * Lc / k, t50 = tau * Math.log((Ti - Tinf) / (Tsafe - Tinf));
+    $("hv").textContent = h; $("Lv").textContent = (L * 1000).toFixed(0);
+    $("bi").querySelector("b").textContent = Bi.toFixed(4) + (Bi < 0.1 ? "  (lumped OK)" : "  (> 0.1, lumped model not valid)");
+    $("bi").className = Bi < 0.1 ? "" : "bad";
+    $("tau").textContent = tau.toFixed(0) + " s";
+    $("t50").textContent = t50.toFixed(0) + " s (" + (t50 / 60).toFixed(1) + " min)";
+
+    var dpr = window.devicePixelRatio || 1, W = cv.clientWidth, H = cv.clientHeight;
+    cv.width = W * dpr; cv.height = H * dpr; ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.clearRect(0, 0, W, H);
+    var pad = { l: 48, r: 14, t: 14, b: 34 }, tmax = Math.max(60, t50 * 1.6);
+    var X = function (t) { return pad.l + (W - pad.l - pad.r) * t / tmax; };
+    var Y = function (T) { return pad.t + (H - pad.t - pad.b) * (1 - T / 320); };
+    ctx.strokeStyle = css("--border"); ctx.fillStyle = css("--muted"); ctx.font = "12px system-ui"; ctx.lineWidth = 1;
+    for (var T = 0; T <= 300; T += 50) { ctx.beginPath(); ctx.moveTo(pad.l, Y(T)); ctx.lineTo(W - pad.r, Y(T)); ctx.stroke(); ctx.fillText(T + "°", 8, Y(T) + 4); }
+    var raw = tmax / 60 / 6, pw = Math.pow(10, Math.floor(Math.log10(raw))), n = raw / pw;
+    var step = (n < 1.5 ? 1 : n < 3.5 ? 2 : n < 7.5 ? 5 : 10) * pw;
+    for (var m = 0; m * 60 <= tmax; m += step) { ctx.fillText(+m.toFixed(2) + " min", X(m * 60) - 12, H - 12); }
+    ctx.setLineDash([4, 4]); ctx.beginPath(); ctx.moveTo(pad.l, Y(Tsafe)); ctx.lineTo(W - pad.r, Y(Tsafe)); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = css("--accent"); ctx.lineWidth = 2.5; ctx.beginPath();
+    for (var i = 0; i <= 300; i++) { var t = tmax * i / 300, Tt = Tinf + (Ti - Tinf) * Math.exp(-t / tau); i ? ctx.lineTo(X(t), Y(Tt)) : ctx.moveTo(X(t), Y(Tt)); }
+    ctx.stroke();
+    ctx.fillStyle = css("--accent"); ctx.beginPath(); ctx.arc(X(t50), Y(Tsafe), 4.5, 0, 7); ctx.fill();
+  }
+  ["h", "L"].forEach(function (id) { $(id).addEventListener("input", draw); });
+  window.addEventListener("resize", draw);
+  draw();
+})();
+</script>
+</body>
+</html>

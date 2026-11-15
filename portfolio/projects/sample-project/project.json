@@ -1,0 +1,35 @@
+{
+  "title": "Sample Project — Lumped-Capacitance Cooling of a Steel Plate",
+  "summary": "A placeholder project that shows every field the portfolio supports. Delete this folder and its line in projects.json once your real projects are in.",
+  "category": "Thermal & Fluids / FEA",
+  "date": "2026-11",
+  "context": "Example course project",
+  "role": "Sole author",
+  "duration": "1 week",
+  "team": "Individual",
+  "status": "Completed",
+  "featured": false,
+  "tags": ["Python", "NumPy", "Matplotlib", "Heat transfer", "Lumped capacitance"],
+  "cover": "images/cover.png",
+  "coverAlt": "Decorative temperature field with the words Sample Project",
+  "highlights": [
+    { "value": "Bi = 0.0056", "label": "Biot number, well under the 0.1 limit" },
+    { "value": "τ ≈ 369 s", "label": "Thermal time constant at h = 50 W/m²·K" },
+    { "value": "≈ 885 s", "label": "Time to cool from 300 °C to 50 °C" }
+  ],
+  "links": [
+    { "label": "Code on GitHub", "url": "https://github.com/[your-username]/[repo]" },
+    { "label": "Write-up (PDF)", "url": "report.pdf" }
+  ],
+  "demo": {
+    "file": "demo/index.html",
+    "title": "Cooling curve explorer",
+    "description": "Drag the sliders to change the convection coefficient and plate thickness; the curve and the Biot-number check update live.",
+    "height": 520
+  },
+  "gallery": [
+    { "src": "images/setup.png", "caption": "Problem setup: plate cooled on both faces" },
+    { "src": "images/biot-check.png", "caption": "Biot number against h — the lumped model holds across the range" }
+  ],
+  "writeup": "writeup.md"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Kedam Ajay Kumar",
+  "headline": "Mechanical Engineer · Thermal Systems, Vehicle Dynamics & Controls",
+  "location": "[City, Country]",
+  "photo": "assets/img/profile-placeholder.svg",
+  "bio": [
+    "[Write 2–3 sentences about who you are: your degree, your focus area, and the kind of problems you like to solve.]",
+    "[Second paragraph, optional: what you are looking for next — e.g. graduate roles in aero-thermal or vehicle dynamics.]"
+  ],
+  "resume": "assets/resume/resume.pdf",
+  "contact": {
+    "email": "[your.email@example.com]",
+    "linkedin": "https://www.linkedin.com/in/[your-handle]",
+    "github": "https://github.com/[your-username]",
+    "scholar": ""
+  },
+  "categories": [
+    "Thermal & Fluids / FEA",
+    "Vehicle Dynamics",
+    "Controls & Estimation"
+  ],
+  "skills": [
+    { "group": "Simulation & CAE", "items": ["ANSYS Mechanical", "ANSYS Fluent", "MATLAB / Simulink", "[add more]"] },
+    { "group": "Programming", "items": ["Python", "NumPy / SciPy", "JavaScript", "[add more]"] },
+    { "group": "Engineering methods", "items": ["Finite element analysis", "Heat transfer", "Modal / eigenvalue analysis", "State estimation (EKF)"] },
+    { "group": "Tools", "items": ["Git", "LaTeX", "[add more]"] }
+  ],
+  "experience": [
+    {
+      "role": "[Role / Intern title]",
+      "org": "[Company or Lab]",
+      "period": "[Mon YYYY] – [Mon YYYY]",
+      "points": [
+        "[What you did, with a number if you can — e.g. reduced simulation time by 40 %]",
+        "[Second achievement]"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "[Degree, Major]",
+      "org": "[University / Institute]",
+      "period": "[YYYY] – [YYYY]",
+      "points": ["[CGPA / percentage]", "[Relevant coursework or thesis]"]
+    }
+  ],
+  "footer": "Built with plain HTML, CSS and JavaScript · Hosted on GitHub Pages"
+}

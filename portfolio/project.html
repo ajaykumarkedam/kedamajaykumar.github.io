@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- KaTeX renders $…$ and $$…$$ equations in write-ups. If the CDN is unreachable the raw TeX is shown instead. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="window.__katexReady && window.__katexReady()"></script>
+  <script>
+    try { var t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html" id="brand">Portfolio</a>
+      <nav class="nav" aria-label="Main">
+        <a class="keep" href="index.html#projects">All projects</a>
+        <a class="btn btn-small" id="nav-resume" href="#" target="_blank" rel="noopener">Résumé</a>
+        <button class="theme-toggle" id="theme-toggle" type="button" aria-label="Toggle dark mode"></button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap project-page" id="project">
+    <a class="back" href="index.html#projects">← All projects</a>
+
+    <header class="project-head">
+      <p class="eyebrow" id="p-category"></p>
+      <h1 id="p-title">Loading…</h1>
+      <p class="headline" id="p-summary"></p>
+      <dl class="meta" id="p-meta"></dl>
+      <ul class="tags" id="p-tags"></ul>
+      <div class="hero-actions" id="p-links"></div>
+    </header>
+
+    <figure class="cover" id="p-cover" hidden><img alt=""></figure>
+
+    <section class="results" id="p-results" hidden>
+      <h2 class="visually-hidden">Key results</h2>
+      <div class="stat-row" id="p-stats"></div>
+    </section>
+
+    <section class="demo" id="p-demo" hidden>
+      <div class="demo-head">
+        <h2 id="p-demo-title">Interactive demo</h2>
+        <a id="p-demo-open" target="_blank" rel="noopener">Open full screen ↗</a>
+      </div>
+      <p class="demo-note" id="p-demo-note"></p>
+      <div class="demo-frame"><iframe id="p-demo-frame" title="Interactive demo" loading="lazy"></iframe></div>
+    </section>
+
+    <article class="prose" id="p-writeup"></article>
+
+    <section class="gallery-wrap" id="p-gallery-wrap" hidden>
+      <h2>Gallery</h2>
+      <div class="gallery" id="p-gallery"></div>
+    </section>
+
+    <nav class="pager" id="p-pager" aria-label="More projects"></nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap" id="footer-text"></div>
+  </footer>
+
+  <div class="load-error wrap" id="load-error" hidden></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/project.js"></script>
+</body>
+</html>

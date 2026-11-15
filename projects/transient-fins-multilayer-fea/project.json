@@ -1,0 +1,23 @@
+{
+  "title": "Transient Heat Transfer Analysis of Fins and Multilayer Systems",
+  "summary": "2D and 3D transient finite-element simulations of fins and multilayer glass with convective boundaries, tracking how they settle to steady state.",
+  "category": "Thermal & Fluids / FEA",
+  "date": "2024-07",
+  "period": "Jul 2024",
+  "status": "Completed",
+  "featured": true,
+  "tags": [
+    "Abaqus",
+    "Transient FEA",
+    "Heat transfer",
+    "Fins"
+  ],
+  "drawing": "fins",
+  "highlights": [
+    {
+      "value": "2D + 3D",
+      "label": "transient heat transfer models"
+    }
+  ],
+  "writeup": "writeup.md"
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project</title>
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+  <!-- KaTeX renders $…$ and $$…$$ equations in write-ups. Without it, the raw TeX is shown. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.css">
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/katex.min.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.11/dist/contrib/auto-render.min.js" onload="window.__katexReady && window.__katexReady()"></script>
+</head>
+<body>
+  <a class="skip" href="#p-writeup">Skip to write-up</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><strong id="brand-name">Portfolio</strong><span id="brand-sub"></span></a>
+      <nav class="nav" aria-label="Main">
+        <a href="index.html">Home</a>
+        <a class="current keep" href="index.html#projects">Projects</a>
+        <a href="index.html#experience">Experience</a>
+        <a href="index.html#contact">Contact</a>
+        <a class="keep" id="nav-resume" href="#" target="_blank" rel="noopener">Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap project-page">
+    <a class="back" href="index.html#projects">Back to all projects</a>
+
+    <header class="card p-head">
+      <p class="label" id="p-category"></p>
+      <h1 id="p-title"></h1>
+      <p class="summary" id="p-summary"></p>
+      <dl class="info" id="p-info"></dl>
+      <ul class="tags" id="p-tags"></ul>
+      <div class="actions" id="p-links"></div>
+    </header>
+
+    <figure class="card cover" id="p-cover" hidden><img alt=""></figure>
+
+    <section class="results" id="p-results" hidden aria-label="Key results"></section>
+
+    <section class="card demo" id="p-demo" hidden>
+      <div class="demo-head">
+        <h2 id="p-demo-title">Interactive model</h2>
+        <a id="p-demo-open" target="_blank" rel="noopener">Open in a new tab</a>
+      </div>
+      <p class="demo-note" id="p-demo-note"></p>
+      <div class="demo-frame"><iframe id="p-demo-frame" title="Interactive model" loading="lazy"></iframe></div>
+    </section>
+
+    <div class="p-body">
+      <div class="card prose-card">
+        <article class="prose" id="p-writeup"></article>
+        <section class="gallery-wrap" id="p-gallery-wrap" hidden>
+          <h2>Gallery</h2>
+          <div class="gallery" id="p-gallery"></div>
+        </section>
+      </div>
+      <nav class="card toc" id="p-toc" aria-label="On this page"></nav>
+    </div>
+
+    <nav class="pager" id="p-pager" aria-label="More projects"></nav>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div><p><strong id="footer-name"></strong></p><p id="footer-copy"></p></div>
+      <nav class="footer-nav" aria-label="Footer"><a href="index.html">Home</a><a href="index.html#projects">Projects</a><a href="index.html#contact">Contact</a></nav>
+    </div>
+  </footer>
+
+  <div class="load-error wrap" id="load-error" hidden></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/drawings.js"></script>
+  <script src="assets/js/markdown.js"></script>
+  <script src="assets/js/project.js"></script>
+</body>
+</html>

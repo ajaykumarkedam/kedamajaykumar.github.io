@@ -1,0 +1,30 @@
+{
+  "title": "Fabrication of a Solar Fan with Study Lamp and Mobile Charger",
+  "summary": "A solar–mains hybrid unit with a 50 W sine-wave inverter that runs a fan, a study lamp and a phone charger, with 8 hours of backup for the lamp.",
+  "category": "Design & Fabrication",
+  "date": "2023-04",
+  "period": "Jan 2023 – Apr 2023",
+  "status": "Completed",
+  "featured": false,
+  "tags": [
+    "Power electronics",
+    "SG3524 inverter",
+    "Voltage regulation",
+    "Fabrication"
+  ],
+  "highlights": [
+    {
+      "value": "50 W",
+      "label": "SG3524-based sine wave inverter"
+    },
+    {
+      "value": "8 h",
+      "label": "backup for a 4 W LED lamp"
+    },
+    {
+      "value": "10 V / 5 W",
+      "label": "solar–mains hybrid supply"
+    }
+  ],
+  "writeup": "writeup.md"
+}

@@ -1,0 +1,17 @@
+{
+  "title": "Dynamic System-Level Modelling of a Closed-Loop Rankine Cycle",
+  "summary": "A dynamic Rankine cycle model in MATLAB Simscape that simulates transient pressure, mass flow and power output across pump, boiler, turbine and condenser.",
+  "category": "Thermal & Fluids / FEA",
+  "date": "2024-04",
+  "period": "Mar 2024 – Apr 2024",
+  "status": "Completed",
+  "featured": false,
+  "tags": [
+    "MATLAB Simscape",
+    "Thermal Liquid library",
+    "System modelling",
+    "Rankine cycle"
+  ],
+  "drawing": "cycle",
+  "writeup": "writeup.md"
+}

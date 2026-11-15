@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio</title>
+  <meta name="description" content="Engineering project portfolio">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/fonts/inter-regular.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/fonts/inter-bold.woff" as="font" type="font/woff" crossorigin>
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <a class="skip" href="#projects">Skip to projects</a>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="index.html"><strong id="brand-name">Portfolio</strong><span id="brand-sub"></span></a>
+      <nav class="nav" aria-label="Main">
+        <a class="current" href="index.html">Home</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+        <a class="keep" id="nav-resume" href="#" target="_blank" rel="noopener">Résumé</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Intro -->
+    <section class="wrap hero" id="about">
+      <div class="card hero-main">
+        <p class="label" id="hero-label"></p>
+        <h1 class="hero-name" id="hero-name"></h1>
+        <p class="hero-tag" id="hero-tag"></p>
+        <div class="hero-intro" id="hero-intro"></div>
+        <div class="actions">
+          <a class="btn btn-primary" href="#projects">View projects</a>
+          <a class="btn" id="hero-resume" href="#" target="_blank" rel="noopener">Download résumé</a>
+        </div>
+      </div>
+      <div class="hero-side">
+        <div class="card card-pad" id="profile-card" hidden>
+          <div class="profile"><img id="profile-photo" alt=""><p id="profile-text"></p></div>
+        </div>
+        <div class="card card-pad" id="focus-card">
+          <p class="label">What I work on</p>
+          <ul class="focus-list" id="focus-list"></ul>
+        </div>
+        <div class="card card-pad">
+          <p class="label">At a glance</p>
+          <dl class="facts" id="facts"></dl>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured projects -->
+    <section class="wrap section" id="projects">
+      <div class="section-head"><h2>Featured projects</h2></div>
+      <div class="cards" id="featured"></div>
+    </section>
+
+    <!-- All projects -->
+    <section class="wrap section" id="all-projects">
+      <div class="section-head"><h2>All projects</h2><p id="project-count"></p></div>
+      <div class="card table-card">
+        <table class="ptable">
+          <thead><tr><th>Project</th><th class="area">Area</th><th class="tools">Tools</th><th>Year</th><th>Open</th></tr></thead>
+          <tbody id="project-rows"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="wrap section" id="skills">
+      <div class="section-head"><h2>Skills</h2></div>
+      <div class="grid-3" id="skills-list"></div>
+    </section>
+
+    <!-- Experience and education -->
+    <section class="wrap section">
+      <div class="grid-2">
+        <div id="experience">
+          <div class="section-head"><h2>Experience</h2></div>
+          <div class="card card-pad" id="experience-list"></div>
+          <div class="card card-pad" id="activities" style="margin-top:18px"></div>
+        </div>
+        <div id="education">
+          <div class="section-head"><h2>Education</h2></div>
+          <div class="card card-pad"><table class="edu"><tbody id="education-list"></tbody></table></div>
+          <div class="card card-pad" id="coursework" style="margin-top:18px"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="wrap section" id="contact">
+      <div class="section-head"><h2>Contact</h2></div>
+      <div class="card card-pad contact-card">
+        <p id="contact-note"></p>
+        <div class="actions" id="contact-actions"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p><strong id="footer-name"></strong></p>
+        <p id="footer-line"></p>
+        <p id="footer-copy"></p>
+      </div>
+      <nav class="footer-nav" aria-label="Footer">
+        <a href="#about">Home</a><a href="#projects">Projects</a><a href="#experience">Experience</a><a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </footer>
+
+  <div class="load-error wrap" id="load-error" hidden></div>
+
+  <script src="assets/js/common.js"></script>
+  <script src="assets/js/drawings.js"></script>
+  <script src="assets/js/home.js"></script>
+</body>
+</html>

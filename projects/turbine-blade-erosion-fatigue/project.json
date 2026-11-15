@@ -1,0 +1,17 @@
+{
+  "title": "Water Droplet Erosion and Fatigue Failure in LP Steam Turbine Blades",
+  "summary": "Literature review of how low-pressure steam turbine blades fail in wet steam, and where on the blade the damage concentrates.",
+  "category": "Thermal & Fluids / FEA",
+  "date": "2025-12",
+  "period": "Dec 2025",
+  "status": "Completed",
+  "featured": false,
+  "tags": [
+    "Literature review",
+    "Wet steam",
+    "Erosion",
+    "Fatigue"
+  ],
+  "drawing": "blade",
+  "writeup": "writeup.md"
+}
